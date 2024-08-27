@@ -19,7 +19,7 @@ const Team = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-3 mb-8">
-        <div className="card bg-base-100 w-96 h-[400px] shadow-xl p-3">
+        <div className="card bg-base-100 sm:w-full md:w-96 sm:mb-4 h-[400px] shadow-xl p-3">
           <img
             className="rounded  h-2/3 bg-base-200 p-2"
             src={person1}
@@ -36,7 +36,7 @@ const Team = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-96 h-[400px] shadow-xl p-3">
+        <div className="card bg-base-100 sm:w-full md:w-96 sm:mb-4 h-[400px] shadow-xl p-3">
           <img
             className="rounded  h-2/3 bg-base-200 p-2"
             src={person2}
@@ -53,7 +53,7 @@ const Team = () => {
             </div>
           </div>
         </div>
-        <div className="card bg-base-100 w-96 h-[400px] shadow-xl p-3">
+        <div className="card bg-base-100 sm:w-full md:w-96 sm:mb-4 h-[400px] shadow-xl p-3">
           <img
             className="rounded  h-2/3 bg-base-200 p-2"
             src={person3}

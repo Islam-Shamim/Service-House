@@ -8,18 +8,18 @@ const About = () => {
         <img className="rounded w-5/6" src={person} alt="Movie" />
         <img className="rounded w-1/2 absolute right-5 bottom-10 p-2  bg-slate-100" src={parts} alt="Movie" />
       </div>
-      <div className="space-y-4 md:w-1/2 p-8">
-        <h2 className="card-title text-orange-600">About Us</h2>
-        <h1 className="text-5xl font-bold w-2/3">
+      <div className="space-y-4 text-center md:w-1/2 p-8">
+        <h2 className="text-xl font-bold text-orange-600">About Us</h2>
+        <h1 className="text-5xl font-bold md:w-2/3">
           We are qualified & of experience in this field.
         </h1>
-        <p>
+        <p className="text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
           recusandae numquam aliquid reiciendis sit quidem ratione, tempora
           consectetur maxime amet fugiat aperiam atque doloremque temporibus!
           Nam quisquam totam maxime laudantium.
         </p>
-        <p>
+        <p className="text-justify">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nemo
           odio veritatis enim illo quos quidem sit officia earum ipsa?
         </p>
