@@ -1,14 +1,34 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.svg";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Header = () => {
+  const {user,logOut} = useContext(AuthContext);
+
+  const handleLogOut = () =>{
+    logOut()
+    .then(()=>{})
+    .catch(error=>console.error(error))
+  }
+
   const links = (
     <div className="text-xl font-semibold flex space-x-3">
       <li><NavLink to='/'>Home</NavLink></li>
       <li><NavLink to='/services'>Services</NavLink></li>
       <li><NavLink to='/products'>Products</NavLink></li>
-      <li><NavLink to='/signIn'>Sign In</NavLink></li>
-      <li><NavLink to='/signUp'>Sign Up</NavLink></li>
+      {
+        user?.email?<>
+        <li><button onClick={handleLogOut}>Log Out</button></li>
+        <li><NavLink to='/myServices'>My Services</NavLink></li>
+        </>:
+        <>
+        <li><NavLink to='/signIn'>Sign In</NavLink></li>
+        <li><NavLink to='/signUp'>Sign Up</NavLink></li>
+        </>
+        
+      }
+      
       <li><NavLink to='/about'>About Us</NavLink></li>
     </div>
   );
