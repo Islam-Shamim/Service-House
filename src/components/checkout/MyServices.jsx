@@ -8,7 +8,7 @@ const MyServices = () => {
   const [myServices, setMyServices] = useState([]);
   console.log(myServices);
 
-  const url = `http://localhost:5000/booking?email=${user?.email}`;
+  const url = `https://car-doctor-server-eight-indol.vercel.app/booking?email=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -16,7 +16,7 @@ const MyServices = () => {
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/booking/${id}`, {
+    fetch(`https://car-doctor-server-eight-indol.vercel.app/booking/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -49,7 +49,7 @@ const MyServices = () => {
   };
 
   const handleBookingConfirm = id =>{
-    fetch(`http://localhost:5000/booking/${id}`, {
+    fetch(`https://car-doctor-server-eight-indol.vercel.app/booking/${id}`, {
       method: "PUT",
       body:JSON.stringify({status : 'Pending'}),
       headers:{

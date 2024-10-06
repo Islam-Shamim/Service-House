@@ -17,7 +17,7 @@ const CheckOut = () => {
     const order = {name,email,date,price,title,img};
     console.log(order);
 
-    fetch("http://localhost:5000/booking",{
+    fetch("https://car-doctor-server-eight-indol.vercel.app/booking",{
         method:'POST',
         body:JSON.stringify(order),
         headers:{
