@@ -15,12 +15,14 @@ const AuthProvider = ({children}) => {
     //handle sign up
     const createUser = (email,password) =>{
         setLoading(true);
+        setUser(null);
         return createUserWithEmailAndPassword(auth,email,password);
     }
 
     //handle sign in
     const userSignIn = (email,password) =>{
         setLoading(true);
+        setUser(null);
         return signInWithEmailAndPassword(auth,email,password);
     }
 
